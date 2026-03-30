@@ -47,8 +47,16 @@ Its a full stack react native framework with powerful cloud services to help us 
 
 - when it asks: Do you want to move existing files to /app-example instead of deleting them? (Y/n) --> Select **n**
 
-3. now give command to start
+3. now give command to install
+
+> npm i
+
+4. Now give below command 
 
 > bunx expo start   
+
+Note if there is any network related then give below command and then above command in point 4   
+> EXPO_OFFLINE=1 bunx expo start
+
 
 
