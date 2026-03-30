@@ -14,3 +14,14 @@
 As per the official doc, the best way to experience React Native is through a Framework like **Expo** - [Click](https://expo.dev/)
 
 <img width="1345" height="934" alt="image" src="https://github.com/user-attachments/assets/43baa143-be00-4493-b031-5ee30c0f81c1" />
+
+
+### What is expo?
+Its a full stack react native framework with powerful cloud services to help us move faster at every stage of app lifecycle.
+(basically provides tool to ease react-native journey)
+
+### Why Expo ? 
+- No Android Studio/ Xcode needed
+- run app instantly on your phone
+- pre build featurs(camera,locations, sensors etc)
+
