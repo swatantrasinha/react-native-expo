@@ -30,3 +30,25 @@ Its a full stack react native framework with powerful cloud services to help us 
 - node js
 - code editor like vscode
 - install "expo go" in andoroid/iOs physical device
+
+### Start with code
+
+1. give command   
+
+> npx create-expo-app@latest
+
+- give name of the app as **expo-crash-course**
+
+**See the various files and folder created**
+
+2. give reset command using bun
+
+> bun run reset-project
+
+- when it asks: Do you want to move existing files to /app-example instead of deleting them? (Y/n) --> Select **n**
+
+3. now give command to start
+
+> bunx expo start   
+
+
