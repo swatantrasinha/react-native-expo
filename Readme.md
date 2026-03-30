@@ -58,5 +58,20 @@ Its a full stack react native framework with powerful cloud services to help us 
 Note if there is any network related then give below command and then above command in point 4   
 > EXPO_OFFLINE=1 bunx expo start
 
+5. We will see QR code 
+we can scan it and see output as below: 
+<img width="369" height="800" alt="image" src="https://github.com/user-attachments/assets/885474df-f9c7-4331-b8d4-d8cdc10669b4" />
+
+
+7. now in **app** folder inside **index.tsx** file, change below:   
+
+   ~<Text>Edit app/index.tsx to edit this screen.</Text>~   
+   to    
+   <Text>Hello World </Text>
+   
+The output in mobile device will be changed to below:
+
+<img width="369" height="800" alt="image" src="https://github.com/user-attachments/assets/3f0802c6-0906-4bee-a444-54ed32a5bffe" />
+
 
 
