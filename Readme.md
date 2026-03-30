@@ -25,3 +25,8 @@ Its a full stack react native framework with powerful cloud services to help us 
 - run app instantly on your phone
 - pre build featurs(camera,locations, sensors etc)
 
+
+### Environment setup for Expo
+- node js
+- code editor like vscode
+- install "expo go" in andoroid/iOs physical device
