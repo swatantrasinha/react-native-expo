@@ -73,7 +73,9 @@ The output in mobile device will be changed to below:
 
 <img width="369" height="800" alt="image" src="https://github.com/user-attachments/assets/3f0802c6-0906-4bee-a444-54ed32a5bffe" />
 
-## Core Components
+## Core Components   
+
+[Core-Components Link](https://reactnative.dev/docs/components-and-apis)
 
 
 
