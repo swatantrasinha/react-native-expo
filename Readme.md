@@ -105,11 +105,13 @@ function HomeScreen() {
 export default HomeScreen;
 ```
 
-Output is below: 
+Output is below:   
+
 <img width="369" height="800" alt="image" src="https://github.com/user-attachments/assets/179d62c5-e489-4a25-aa5b-cf4db79f5f5a" />
 
-3. [ScrollView](https://reactnative.dev/docs/scrollview)
-What is use of ScrollView when View is there ?
+3. [ScrollView](https://reactnative.dev/docs/scrollview)   
+
+What is use of ScrollView when View is there ?   
 
 In the above code of rendering text "Hello from Home Screen" once, we will make below changes to render it multiple times:   
 
@@ -157,10 +159,12 @@ then it will fix the issue and we will be able to scroll
 <img width="369" height="800" alt="image" src="https://github.com/user-attachments/assets/07c3a336-410c-4c11-8ac5-e5e44fdf45a7" />
 
 
-4. [Alert](https://reactnative.dev/docs/alert)
+4. [Alert](https://reactnative.dev/docs/alert)   
+
 This launches an alert dialog with the specified title and message. Optionally provide a list of buttons. Tapping any button will fire the respective onPress callback and dismiss the alert. By default, the only button will be an 'OK' button.
 
-5. [Switch](https://reactnative.dev/docs/switch)
+5. [Switch](https://reactnative.dev/docs/switch)   
+
 It renders a boolean input.
 This is a controlled component that requires an onValueChange callback that updates the value prop in order for the component to reflect user actions. If the value prop is not updated, the component will continue to render the supplied value prop instead of the expected result of any user actions.
 
