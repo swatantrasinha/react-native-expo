@@ -218,42 +218,23 @@ How it works :
         If the person leaves their finger longer than 500 milliseconds before removing it, onLongPress is triggered. (onPressOut will still fire when they remove their finger.)
 
 
-```javascript
-import { useState } from "react";
-import { Pressable, ScrollView, TextInput, Text, Alert } from "react-native";
 
-function HomeScreen() {
-  const [mobile, setMobile]= useState('')
-  const [address, setAddress]= useState('')
-
-    const [textStatus, setTextStatus]= useState('not pressed')
-
-  const onPress = () => {
-    Alert.alert("Text is pressed !!!")
-  }
-
-  return (
-    <ScrollView>
-      <TextInput value={mobile} style={{borderWidth:1}} onChangeText={setMobile} keyboardType="number-pad" placeholder="Enter Mobile Number" />
-
-      <TextInput multiline numberOfLines={3} value={address} style={{borderWidth:1}} onChangeText={setAddress} keyboardType="numbers-and-punctuation" placeholder="Enter Address" />
-
-      <Pressable 
-        onPress={onPress} 
-        onPressIn={() => setTextStatus("Pressed In")} 
-        onPressOut={() => setTextStatus("Pressed Out")} 
-        onLongPress={() => setTextStatus("Long Pressed")}><Text>{textStatus}</Text></Pressable>
-
-    </ScrollView>
-  )
-}
-
-export default HomeScreen;
-
-```
 Output is below:   
 
 <img width="369" height="800" alt="image" src="https://github.com/user-attachments/assets/ec6f0ce7-6759-41fe-9966-1cf113617c14" />   
+
+8. [Image](https://reactnative.dev/docs/image)
+
+Thisis React component for displaying different types of images, including network images, static resources, temporary local images, and images from local disk, such as the camera roll.
+
+Important Links for Image:   
+    (a) [resizeMode](https://reactnative.dev/docs/image#resizemode)   
+    (b) [resizeMethod](https://reactnative.dev/docs/image#resizemethod-android)   
+    (c) [resizeMultiplier](https://reactnative.dev/docs/image#resizemultiplier-android)   
+    
+
+
+
 
 
 
