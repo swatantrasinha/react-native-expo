@@ -27,11 +27,14 @@ Its a full stack react native framework with powerful cloud services to help us 
 
 
 ### Environment setup for Expo
-- node js
-- code editor like vscode
-- install "expo go" in andoroid/iOs physical device
+- [X] node js
+- [X] code editor like vscode
+- [X] install "expo go" in andoroid/iOs physical device
 
 ### Start with code
+<details>
+    <summary>Steps to start with expo</summary>
+    <p>
 
 1. give command   
 
@@ -73,9 +76,11 @@ The output in mobile device will be changed to below:
 
 <img width="369" height="800" alt="image" src="https://github.com/user-attachments/assets/3f0802c6-0906-4bee-a444-54ed32a5bffe" />
 
+</p>
+</details>
 ## Core Components   
 
-[Core-Components Link](https://reactnative.dev/docs/components-and-apis)
+This is official [Link](https://reactnative.dev/docs/components-and-apis) for core components to be used
 
 
 
