@@ -198,6 +198,65 @@ export default HomeScreen;
 Output is below:   
 <img width="590" height="1280" alt="image" src="https://github.com/user-attachments/assets/65bb3c31-38df-42ad-9659-195d1acd5d8e" />
 
+6. [TextInput](https://reactnative.dev/docs/textinput)   
+
+here, TextArea feature is TextInput with multiline 
+
+7. [Pressable](https://reactnative.dev/docs/pressable)
+
+Pressable is a Core Component wrapper that can detect various stages of press interactions on any of its defined children.   
+
+How it works :
+
+    On an element wrapped by Pressable:
+        onPressIn is called when a press is activated.
+        onPressOut is called when the press gesture is deactivated.
+
+    After pressing onPressIn, one of two things will happen:
+
+        The person will remove their finger, triggering onPressOut followed by onPress.
+        If the person leaves their finger longer than 500 milliseconds before removing it, onLongPress is triggered. (onPressOut will still fire when they remove their finger.)
+
+
+```javascript
+import { useState } from "react";
+import { Pressable, ScrollView, TextInput, Text, Alert } from "react-native";
+
+function HomeScreen() {
+  const [mobile, setMobile]= useState('')
+  const [address, setAddress]= useState('')
+
+    const [textStatus, setTextStatus]= useState('not pressed')
+
+  const onPress = () => {
+    Alert.alert("Text is pressed !!!")
+  }
+
+  return (
+    <ScrollView>
+      <TextInput value={mobile} style={{borderWidth:1}} onChangeText={setMobile} keyboardType="number-pad" placeholder="Enter Mobile Number" />
+
+      <TextInput multiline numberOfLines={3} value={address} style={{borderWidth:1}} onChangeText={setAddress} keyboardType="numbers-and-punctuation" placeholder="Enter Address" />
+
+      <Pressable 
+        onPress={onPress} 
+        onPressIn={() => setTextStatus("Pressed In")} 
+        onPressOut={() => setTextStatus("Pressed Out")} 
+        onLongPress={() => setTextStatus("Long Pressed")}><Text>{textStatus}</Text></Pressable>
+
+    </ScrollView>
+  )
+}
+
+export default HomeScreen;
+
+```
+Output is below:   
+
+<img width="369" height="800" alt="image" src="https://github.com/user-attachments/assets/ec6f0ce7-6759-41fe-9966-1cf113617c14" />   
+
+
+
 
 
 
