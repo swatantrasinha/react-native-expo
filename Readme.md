@@ -227,10 +227,102 @@ Output is below:
 
 Thisis React component for displaying different types of images, including network images, static resources, temporary local images, and images from local disk, such as the camera roll.
 
+```javascript
+
+import {  ScrollView,  Image } from "react-native";
+
+function HomeScreen() {
+
+  return (
+    <ScrollView>
+
+      <Image source={{
+         uri: 'https://reactnative.dev/img/tiny_logo.png',
+      }}
+      style={{height:150, width:150}}
+      />
+
+    </ScrollView>
+  )
+}
+
+export default HomeScreen;
+
+```
+
+Output is below :   
+<img width="369" height="800" alt="image" src="https://github.com/user-attachments/assets/1f2205a5-c1d4-4d34-aedf-978f0445a58f" />
+
+
 Important Links for Image:   
     (a) [resizeMode](https://reactnative.dev/docs/image#resizemode)   
     (b) [resizeMethod](https://reactnative.dev/docs/image#resizemethod-android)   
-    (c) [resizeMultiplier](https://reactnative.dev/docs/image#resizemultiplier-android)   
+    (c) [resizeMultiplier](https://reactnative.dev/docs/image#resizemultiplier-android)  
+
+9. [ImageBackground](https://reactnative.dev/docs/imagebackground)   
+
+From the link above we will try to use the code written there and see the output
+
+```javascript
+import React from 'react';
+import {ImageBackground, StyleSheet, Text} from 'react-native';
+import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+
+const image = {uri: 'https://legacy.reactjs.org/logo-og.png'};
+
+const App = () => (
+  <SafeAreaProvider>
+    <SafeAreaView style={styles.container} edges={['left', 'right']}>
+      <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+        <Text style={styles.text}>Inside</Text>
+      </ImageBackground>
+    </SafeAreaView>
+  </SafeAreaProvider>
+);
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  text: {
+    color: 'white',
+    fontSize: 42,
+    lineHeight: 84,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    backgroundColor: '#000000c0',
+  },
+});
+
+export default App;
+```
+Note: SafeAreaView is the area which is free from notifications and other existing area. This is used to get a safer placeholder to render the output.   
+
+Output is below:   
+<img width="369" height="800" alt="image" src="https://github.com/user-attachments/assets/8587b64f-2b69-49af-9907-c2ed10aa7fc7" />
+
+
+
+10. [Flatlist](https://reactnative.dev/docs/flatlist)
+
+A performant interface for rendering basic, flat lists, supporting the most handy features:
+
+    - Fully cross-platform.
+    - Optional horizontal mode.
+    - Configurable viewability callbacks.
+    - Header support.
+    - Footer support.
+    - Separator support.
+    - Pull to Refresh.
+    - Scroll loading.
+    - ScrollToIndex support.
+    - Multiple column support.
+
+
     
 
 
