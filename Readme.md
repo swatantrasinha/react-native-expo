@@ -78,9 +78,22 @@ The output in mobile device will be changed to below:
 
 </p>
 </details>
+
 ## Core Components   
 
-This is official [Link](https://reactnative.dev/docs/components-and-apis) for core components to be used
+This is official [Link](https://reactnative.dev/docs/components-and-apis) for core components to be used   
+
+1. [View](https://reactnative.dev/docs/view)   
+this is like **div** in jsx
+
+2. [Text](https://reactnative.dev/docs/text)   
+this is like **paragraph**, **heading**, **span** in jsx used to render string
+
+Now in **index.tsx** we will clear the existing code for **Hello world** and write below code:   
+
+```javascript
+
+```
 
 
 
