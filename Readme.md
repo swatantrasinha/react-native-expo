@@ -89,11 +89,111 @@ this is like **div** in jsx
 2. [Text](https://reactnative.dev/docs/text)   
 this is like **paragraph**, **heading**, **span** in jsx used to render string
 
-Now in **index.tsx** we will clear the existing code for **Hello world** and write below code:   
+Now in **index.tsx** we will clear the existing code for **Hello world** and write below code:  
 
 ```javascript
+import { Text, View } from "react-native";
+
+function HomeScreen() {
+  return (
+    <View>
+      <Text style={{fontSize:24}}>Hello from Home Screen</Text>
+      </View>
+  )
+}
+
+export default HomeScreen;
+```
+
+Output is below: 
+<img width="369" height="800" alt="image" src="https://github.com/user-attachments/assets/179d62c5-e489-4a25-aa5b-cf4db79f5f5a" />
+
+3. [ScrollView](https://reactnative.dev/docs/scrollview)
+What is use of ScrollView when View is there ?
+
+In the above code of rendering text "Hello from Home Screen" once, we will make below changes to render it multiple times:   
+
+```javascript
+import { Text, View } from "react-native";
+
+function HomeScreen() {
+  return (
+    <View>
+    {
+      [...Array(60)].map((_,i) => (
+        <Text key={i} style={{fontSize:24}}>Hello from Home Screen{i+1}</Text>
+    ))}
+    </View>
+  )
+}
+
+export default HomeScreen;
 
 ```
+Here in output we will see that we are not able to scroll   
+<img width="369" height="800" alt="image" src="https://github.com/user-attachments/assets/a5dbb78a-5638-45f6-9567-340e48d2b9cf" />
+
+If we wrap our code in ScrollView instead of View   
+
+```javascript
+import { Text, ScrollView } from "react-native";
+
+function HomeScreen() {
+  return (
+    <ScrollView>
+    {
+      [...Array(60)].map((_,i) => (
+        <Text key={i} style={{fontSize:24}}>Hello from Home Screen{i+1}</Text>
+    ))}
+    </ScrollView>
+  )
+}
+
+export default HomeScreen;
+```
+
+then it will fix the issue and we will be able to scroll   
+
+<img width="369" height="800" alt="image" src="https://github.com/user-attachments/assets/07c3a336-410c-4c11-8ac5-e5e44fdf45a7" />
+
+
+4. [Alert](https://reactnative.dev/docs/alert)
+This launches an alert dialog with the specified title and message. Optionally provide a list of buttons. Tapping any button will fire the respective onPress callback and dismiss the alert. By default, the only button will be an 'OK' button.
+
+5. [Switch](https://reactnative.dev/docs/switch)
+It renders a boolean input.
+This is a controlled component that requires an onValueChange callback that updates the value prop in order for the component to reflect user actions. If the value prop is not updated, the component will continue to render the supplied value prop instead of the expected result of any user actions.
+
+Now in **index.tsx** we will clear the existing code for **Hello world** and write below code:  
+ 
+
+```javascript
+import { useState } from "react";
+import { Text, View, Button, Alert, Switch } from "react-native";
+
+function HomeScreen() {
+  const [isEnabled, setIsEnabled] = useState(false);
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+
+  const pressMe = () => {
+    Alert.alert("Button Clicked !!!");
+  }
+
+  return (
+    <View>
+      <Text style={{fontSize:24}}>Hello from Home Screen</Text>
+      <Button title='Click Me' onPress={pressMe} />
+      <Switch value={isEnabled} onValueChange={toggleSwitch} />
+    </View>
+  );
+}
+
+export default HomeScreen;
+```
+
+Output is below:   
+<img width="590" height="1280" alt="image" src="https://github.com/user-attachments/assets/65bb3c31-38df-42ad-9659-195d1acd5d8e" />
+
 
 
 
